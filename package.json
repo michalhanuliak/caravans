@@ -1,0 +1,45 @@
+{
+  "name": "praguelabs_intro_task",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate-barrels": "barrelsby --delete -l all -d ./src"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/material": "^5.11.8",
+    "@mui/styled-engine-sc": "^5.11.0",
+    "@types/ramda": "^0.28.23",
+    "@types/react-slick": "^0.23.10",
+    "@types/shortid": "^0.0.29",
+    "next": "12.0.3",
+    "ramda": "^0.28.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-multi-carousel": "^2.8.2",
+    "react-slick": "^0.29.0",
+    "react-use": "^17.4.0",
+    "sharp": "^0.31.3",
+    "shortid": "^2.2.16",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.6",
+    "swr": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "16.11.7",
+    "@types/react": "17.0.34",
+    "@types/styled-components": "^5.1.15",
+    "babel-plugin-styled-components": "^1.12.0",
+    "barrelsby": "^2.5.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.3",
+    "lodash": "^4.17.21",
+    "typescript": "4.4.4"
+  }
+}
