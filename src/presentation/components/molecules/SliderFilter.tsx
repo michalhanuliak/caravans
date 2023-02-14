@@ -1,4 +1,4 @@
-import { ChangeEvent, ChangeEventHandler } from "react";
+import { ChangeEvent } from "react";
 import { Slider, HorizontalStack, PriceField } from "../atoms";
 import { FilterWrapper } from "./FilterWrapper";
 

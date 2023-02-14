@@ -1,7 +1,7 @@
 import { Caravan } from "../../../domain";
-import { Box } from "../atoms";
+import { shortid } from "../../utils";
+import { Box, Text } from "../atoms";
 import { CaravanCard } from "../organisms";
-import shortid from "shortid";
 
 export interface CardsLayoutProps {
   data: Caravan[];
@@ -12,6 +12,7 @@ export function CardsLayout({ data }: CardsLayoutProps) {
     <CaravanCard key={shortid.generate()} {...item} />
   ));
 
+  // Empty state not working correctly since there is no loading from API
   return (
     <Box
       display="grid"
@@ -20,7 +21,11 @@ export function CardsLayout({ data }: CardsLayoutProps) {
       width="100%"
       justifyContent="center"
     >
-      {renderCards}
+      {data.length > 0 ? (
+        renderCards
+      ) : (
+        <Text fontSize="2.2rem">Žádné výsledky</Text>
+      )}
     </Box>
   );
 }

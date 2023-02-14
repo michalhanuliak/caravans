@@ -12,7 +12,7 @@ export type Option = {
   desc: string;
 };
 
-export type Filters = {
+export type TFilters = {
   slider: number[];
   type: FilterTypeOption[];
   instantReservation: BooleanSelectValue;

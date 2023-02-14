@@ -2,11 +2,10 @@ import { useTheme } from "@mui/material";
 import { Divider, HorizontalStack } from "../atoms";
 import { BooleanSelect, SliderFilter } from "../molecules";
 import { TypeFilter } from "../organisms";
-import { debounce } from "../../utils";
+import { debounce, useUpdateEffect } from "../../utils";
 import { useCallback } from "react";
-import { useUpdateEffect } from "react-use";
 import { useFilters } from "../../hooks";
-import { Option } from "../../../domain";
+import { Option, TFilters } from "../../../domain";
 
 const OPTIONS: Option[] = [
   {
@@ -32,7 +31,7 @@ const OPTIONS: Option[] = [
 ];
 
 interface FiltersProps {
-  onChange: (key: string) => void;
+  onChange: (filters: TFilters) => void;
 }
 
 export function Filters({ onChange }: FiltersProps) {
